@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
@@ -24,7 +24,14 @@ export default function App() {
     //   <Button title="Enter"></Button>
     // </View>
     <NavigationContainer>
-      <LandingTabNav.Navigator>
+      <LandingTabNav.Navigator
+        initialRouteName="Create"
+        tabBarOptions={{
+          activeBackgroundColor: '#d9d7d7',
+          activeTintColor: '#000000',
+          inactiveTintColor: '#000000'
+        }}
+      >
         <LandingTabNav.Screen name="Daydream" component={ daydreamScreen }/>
         <LandingTabNav.Screen name="Create" component={ createScreen }/>
         <LandingTabNav.Screen name="Organize" component={ organizeScreen }/>

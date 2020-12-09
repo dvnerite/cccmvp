@@ -5,10 +5,20 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 
 const createScreen = () => {
     return (
-        <View>
-            <Text style={{textAlign: "center", marginTop: 350}}>Create Screen</Text>
+        <View style={styles.container}>
+            <Text>Create Screen</Text>
         </View>
     )
 }
 
 export default createScreen;
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  });
+  

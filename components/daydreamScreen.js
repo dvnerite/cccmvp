@@ -5,10 +5,19 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 
 const daydreamScreen = () => {
     return (
-        <View>
-            <Text style={{textAlign: "center", marginTop: 350}}>DayDream Screen</Text>
+        <View style={styles.container}>
+            <Text>DayDream Screen</Text>
         </View>
     )
 }
 
 export default daydreamScreen;
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  });

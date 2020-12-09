@@ -5,10 +5,19 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 
 const organizeScreen = () => {
     return (
-        <View>
-            <Text style={{textAlign: "center", marginTop: 350}}>Organize Screen</Text>
+        <View style={styles.container}>
+            <Text>Organize Screen</Text>
         </View>
     )
 }
 
 export default organizeScreen;
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  });
