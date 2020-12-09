@@ -28,7 +28,7 @@ export default function App() {
         initialRouteName="Create"
         tabBarOptions={{
           activeBackgroundColor: '#d9d7d7',
-          activeTintColor: '#000000',
+          activeTintColor: '#00316e',
           inactiveTintColor: '#000000'
         }}
       >
