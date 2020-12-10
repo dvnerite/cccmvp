@@ -16,8 +16,8 @@ const daydreamScreen = () => {
             <Right />
             </Header>
         </Container>
-        <View style={styles.container}>
-            <Text>DayDream Screen</Text>
+        <View style={{alignItems: 'center', marginTop: 120}}>
+            <Text style={{ fontSize: 20, fontWeight: '500' }}>Daydream Sessions</Text>
         </View>
         </View>
     )

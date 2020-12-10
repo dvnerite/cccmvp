@@ -16,9 +16,13 @@ const createScreen = () => {
             <Right />
             </Header>
         </Container>
-        <View style={styles.container}>
-            <Text>Create Screen</Text>
+        <View style={{alignItems: 'center', marginTop: 120}}>
+            <Text style={{ fontSize: 20, fontWeight: '500' }}>Create</Text>
         </View>
+        <View style={{ marginTop: 20}}>
+            <Button title="New Thought Cloud"></Button>
+        </View>
+        
         </View>
     )
 }

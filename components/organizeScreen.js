@@ -16,8 +16,8 @@ const organizeScreen = () => {
             <Right />
             </Header>
         </Container>
-        <View style={styles.container}>
-            <Text>Organize Screen</Text>
+        <View style={{alignItems: 'center', marginTop: 120}}>
+            <Text style={{ fontSize: 20, fontWeight: '500' }}>My Thought Clouds</Text>
         </View>
         </View>
     )
