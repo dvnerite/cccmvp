@@ -6,15 +6,17 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-///------------------------------ COMPONENTS ------------------------------///
+///------------------------------ IMPORTS ---------------------------------///
+import createTC from './components/createTC';
+import TrackView from './components/TrackView';
 import createScreen from './components/createScreen';
 import daydreamScreen from './components/daydreamScreen';
 import organizeScreen from './components/organizeScreen';
 
-
-
-
+///------------------------------ NAVIGATORS ------------------------------///
 const LandingTabNav = createBottomTabNavigator();
+
+
 
 export default function App() {
   return (
@@ -32,6 +34,9 @@ export default function App() {
           inactiveTintColor: '#000000'
         }}
       >
+        <LandingTabNav.Screen name="TC" component={ createTC }/>
+
+        <LandingTabNav.Screen name="TrackView" component={ TrackView }/>
         <LandingTabNav.Screen name="Daydream" component={ daydreamScreen }/>
         <LandingTabNav.Screen name="Create" component={ createScreen }/>
         <LandingTabNav.Screen name="Organize" component={ organizeScreen }/>
