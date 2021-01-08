@@ -7,11 +7,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 ///------------------------------ IMPORTS ---------------------------------///
-import createTC from './components/createTC';
-import TrackView from './components/TrackView';
-import createScreen from './components/createScreen';
-import daydreamScreen from './components/daydreamScreen';
-import organizeScreen from './components/organizeScreen';
+import testAudioPlay from './views/testAudioPlay'
+import createTC from './views/createTC';
+import TrackView from './views/trackView';
+import HomeStack from './views/Create';
+import DreamStack from './views/DayDream';
+import organizeScreen from './views/Organize';
 
 ///------------------------------ NAVIGATORS ------------------------------///
 const LandingTabNav = createBottomTabNavigator();
@@ -20,11 +21,6 @@ const LandingTabNav = createBottomTabNavigator();
 
 export default function App() {
   return (
-    // <View style={styles.container}>
-    //   <Text>CCC MVP</Text>
-    //   <StatusBar style="auto" />
-    //   <Button title="Enter"></Button>
-    // </View>
     <NavigationContainer>
       <LandingTabNav.Navigator
         initialRouteName="Create"
@@ -34,11 +30,11 @@ export default function App() {
           inactiveTintColor: '#000000'
         }}
       >
-        <LandingTabNav.Screen name="TC" component={ createTC }/>
-
-        <LandingTabNav.Screen name="TrackView" component={ TrackView }/>
-        <LandingTabNav.Screen name="Daydream" component={ daydreamScreen }/>
-        <LandingTabNav.Screen name="Create" component={ createScreen }/>
+        <LandingTabNav.Screen name="-Audio-" component={ testAudioPlay }/>
+        <LandingTabNav.Screen name="-TC-" component={ createTC }/>
+        {/* <LandingTabNav.Screen name="-TrackView-" component={ TrackView }/> */}
+        <LandingTabNav.Screen name="Daydream" component={ DreamStack }/>
+        <LandingTabNav.Screen name="Create" component={ HomeStack }/>
         <LandingTabNav.Screen name="Organize" component={ organizeScreen }/>
       </LandingTabNav.Navigator>
     </NavigationContainer>

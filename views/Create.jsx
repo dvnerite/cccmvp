@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useNavigation, useRoute } from '@react-navigation/native'
+import { useNavigation, useRoute, NavigationHelpersContext } from '@react-navigation/native'
 import { StyleSheet, Text, View } from 'react-native';
 import { Container, Header, Left, Body, Right, Title } from 'native-base';
 import { Button, Card } from 'react-native-paper';
@@ -7,28 +7,29 @@ import { Button, Card } from 'react-native-paper';
 ///------------------------------ NAVIGATION --------------------------------///
 import { createStackNavigator} from '@react-navigation/stack';
 
-
 ///------------------------------ IMPORTS ----------------------------------///
 import createTC from './createTC';
 
 ///------------------------------ NAVIGATORS ------------------------------///
-const CreateScreenStack = createStackNavigator();
-CreateScreenStackNav();
+const HomeNav = createStackNavigator();
 
+HomeStack();
 
-function CreateScreenStackNav() {
+function HomeStack() {
 
     return(
-            <CreateScreenStack.Navigator mode="modal">
-                <CreateScreenStack.Screen 
-                    name="createTC" 
+            <HomeNav.Navigator mode="modal">
+                <HomeNav.Screen 
+                    name="Home" 
+                    component={Create} />
+                <HomeNav.Screen 
+                    name="CreateTC" 
                     component={createTC} />
-            </CreateScreenStack.Navigator>
+            </HomeNav.Navigator>
     )
 }
 
-const createScreen = () => {
-    const navigation = useNavigation()
+const Create = ({ navigation }) => {
 
     return (
         <View>
@@ -49,7 +50,7 @@ const createScreen = () => {
                     title="New Thought Cloud"
                     mode="contained"
                     color="#194776"
-                    onPress= {() => navigation.push('createTC')}
+                    onPress={ () => navigation.navigate('CreateTC')}
             >
             New Thought Cloud
             </Button>
@@ -61,7 +62,7 @@ const createScreen = () => {
     )
 }
 
-export default createScreen;
+export default HomeStack;
 
 const styles = StyleSheet.create({
     container: {
