@@ -7,4 +7,12 @@ I, Devin Wilson, am the sole software developer of this project.
 
 ~ Began 7/2020 ~
 
+Technology used: 
+
+- Javascript
+- React Native 
+- Redux
+- Firebase
+
+
 
